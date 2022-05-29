@@ -1,0 +1,22 @@
+h2 {
+    font-weight: bold;
+}
+     
+a {
+    display: inline-block;
+    color: #ab1c3d;
+    text-decoration: none;
+}
+     
+a::after {
+	display: block;
+    width: 0px;
+    height: 3px;
+    background: #ab1c3d;
+    transition: 300ms;
+	content: "";
+}
+     
+a:hover::after {
+    width: 100%;
+}
