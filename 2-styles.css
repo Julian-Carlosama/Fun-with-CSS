@@ -1,0 +1,59 @@
+.toggle {
+	margin: 60px;
+}
+
+input[type="checkbox"] {
+  	position: relative;
+  	width: 120px;
+  	height: 45px;
+  	-webkit-appearance: none;
+  	background: #c6c6c6;
+  	outline: none;
+  	border: 1px solid gray;
+  	border-radius: 35px;
+  	transition: 0.5;
+}
+
+input:checked[type="checkbox"] {
+  	background: red;
+}
+
+input[type="checkbox"]::before {
+  	content: "";
+  	position: absolute;
+  	width: 60px;
+  	height: 60px;
+  	background: white;
+  	border-radius: 35px;
+  	top: -8px;
+  	left: -18px;
+  	box-shadow: 0 2px 5px #BEBCBE;
+  	border: 2px solid gray;
+  	transition: 0.5s;
+  	z-index: 3;
+}
+
+input:checked[type="checkbox"]::before {
+  	left: 75px;
+}
+
+input:checked[type="checkbox"]::after {
+  	content: "YES";
+  	font-size: 23px;
+  	color:white;
+  	font-weight: bold;
+  	position: absolute;
+  	top: 10px;
+  	left: 18px;
+}
+
+input[type="checkbox"]::after {
+  	content: "NO";
+  	font-size: 23px;
+  	color:gray;
+  	font-weight: bold;
+  	position: absolute;
+  	top: 10px;
+  	left: 62px;
+  	transition: 0.5;
+}
